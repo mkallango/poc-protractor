@@ -10,10 +10,10 @@ chromenode:
   links:
     - seleniumhub:hub
     
-# firefoxnode:
-#   image: selenium/node-firefox
-#   ports:
-#     - 5901
-#   links:
-#     - seleniumhub:hub
+firefoxnode:
+  image: selenium/node-firefox
+  ports:
+    - 5901
+  links:
+    - seleniumhub:hub
     

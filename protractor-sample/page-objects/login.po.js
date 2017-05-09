@@ -1,4 +1,4 @@
-var hs = require("../scripts/help-scripts");
+var aux = require("../scripts/aux-scripts");
 
 class Login {
     constructor() {
@@ -15,27 +15,27 @@ class Login {
     credenciais(user,pass) {
         //Fill email field
         browser
-            .wait(hs.isClickable(this.username),10000)
+            .wait(aux.isClickable(this.username),10000)
             .then(this.username.sendKeys(user))
-            .then(hs.printScreen('01-test.png'));
+            .then(aux.printScreen('test.png'));
         
         //Click Next button
         browser
-            .wait(hs.isClickable(this.nextFromEmail),10000)
+            .wait(aux.isClickable(this.nextFromEmail),10000)
             .then(this.nextFromEmail.click())
-            .then(hs.printScreen('02-test-click.png'));
+            .then(aux.printScreen('test-click.png'));
         
         //Fill password field
         browser
-            .wait(hs.isClickable(this.password),10000)
+            .wait(aux.isClickable(this.password),10000)
             .then(this.password.sendKeys(pass))
-            .then(hs.printScreen('03-test-pass.png'));
+            .then(aux.printScreen('test-pass.png'));
         
         //Click Next button
         browser
-            .wait(hs.isClickable(this.nextFromPass),10000)
+            .wait(aux.isClickable(this.nextFromPass),10000)
             .then(this.nextFromPass.click())
-            .then(hs.printScreen('04-test-click-pass.png'));
+            .then(aux.printScreen('test-click-pass.png'));
     }
 
     logarNaPagina(){
