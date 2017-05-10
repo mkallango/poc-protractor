@@ -7,7 +7,7 @@ module.exports = {
   },
   config: {
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['./specs/*.spec.js'],
+    specs: ['./specs/contratos.spec.js'],
 
     onPrepare: function(){
       browser.ignoreSynchronization = true;
